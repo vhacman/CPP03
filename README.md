@@ -1,3 +1,12 @@
+![Score](https://img.shields.io/badge/Score-/100-brightgreen?style=for-the-badge)
+[![42 Project](https://img.shields.io/badge/42%20Project-CPP02-blue?style=for-the-badge&logo=42)](https://github.com/vhacman/CPP01)
+[![C++ Language](https://img.shields.io/badge/Made%20with-C++-00599C?style=for-the-badge&logo=c++)](https://en.wikipedia.org/wiki/C_(programming_language))
+[![Memory Leak Free](https://img.shields.io/badge/Valgrind-Leaks%20Free-success?style=for-the-badge)](https://valgrind.org/)
+[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Unix-violet?style=for-the-badge)]()
+[![License](https://img.shields.io/badge/license-42%20Project-informational?style=for-the-badge)]()
+[![Status](https://img.shields.io/badge/42%20status-Completed-brightgreen?style=for-the-badge)]()
+[![Created](https://img.shields.io/badge/Created-September_2025-blue?style=for-the-badge)]()
+
 # CPP Module 03 - Inheritance
 
 A C++ project exploring object-oriented programming concepts, specifically inheritance, polymorphism, and the diamond problem.
@@ -84,12 +93,6 @@ The base robot class with fundamental attributes and behaviors.
 - `attack(const std::string& target)` - Attacks a target, costing 1 energy point
 - `takeDamage(unsigned int amount)` - Reduces hit points
 - `beRepaired(unsigned int amount)` - Restores hit points, costing 1 energy point
-
-**Features tested:**
-- Basic object creation and destruction
-- Copy constructor and assignment operator
-- Energy depletion mechanics
-- Death state handling
 
 ### Exercise 01: ScavTrap
 
@@ -221,21 +224,10 @@ Each program demonstrates:
 ### The Diamond Problem
 When a class inherits from multiple classes that share a common base class, it creates ambiguity and duplicate base class members. Virtual inheritance solves this by ensuring only one instance of the base class exists.
 
-### Orthodox Canonical Form
-All classes implement:
-- Default constructor
-- Copy constructor
-- Assignment operator
-- Destructor
-
-### Constructor/Destructor Chaining
-- Constructors: Base class → Derived classes (in inheritance order)
-- Destructors: Derived classes → Base class (reverse order)
-
-## Author
-
-vhacman (vhacman@student.42.fr)
-
+## 👤 Autore
+**vhacman**
+- Github: [vhacman](https://github.com/vhacman)
+- 42 Intra: [vhacman](https://profile.intra.42.fr/)
 ## License
 
 This project is part of the 42 School curriculum.
@@ -260,55 +252,6 @@ Un progetto C++ che esplora i concetti della programmazione orientata agli ogget
 ## Panoramica
 
 Questo progetto implementa una serie di classi robot che dimostrano i concetti dell'ereditarietà in C++. Ogni esercizio si costruisce sul precedente, introducendo nuovi pattern di ereditarietà ed esplorando la complessità dell'ereditarietà multipla, culminando nella risoluzione del problema del diamante.
-
-## Struttura del Progetto
-
-```
-CPP03/
-├── ex00/           # Classe base ClapTrap
-│   ├── includes/
-│   │   └── ClapTrap.hpp
-│   ├── src/
-│   │   ├── ClapTrap.cpp
-│   │   └── main.cpp
-│   └── Makefile
-│
-├── ex01/           # ScavTrap (eredita da ClapTrap)
-│   ├── includes/
-│   │   ├── ClapTrap.hpp
-│   │   └── ScavTrap.hpp
-│   ├── src/
-│   │   ├── ClapTrap.cpp
-│   │   ├── ScavTrap.cpp
-│   │   └── main.cpp
-│   └── Makefile
-│
-├── ex02/           # FragTrap (eredita da ClapTrap)
-│   ├── includes/
-│   │   ├── ClapTrap.hpp
-│   │   ├── ScavTrap.hpp
-│   │   └── FragTrap.hpp
-│   ├── src/
-│   │   ├── ClapTrap.cpp
-│   │   ├── ScavTrap.cpp
-│   │   ├── FragTrap.cpp
-│   │   └── main.cpp
-│   └── Makefile
-│
-└── ex03/           # DiamondTrap (ereditarietà multipla)
-    ├── includes/
-    │   ├── ClapTrap.hpp
-    │   ├── ScavTrap.hpp
-    │   ├── FragTrap.hpp
-    │   └── DiamondTrap.hpp
-    ├── src/
-    │   ├── ClapTrap.cpp
-    │   ├── ScavTrap.cpp
-    │   ├── FragTrap.cpp
-    │   ├── DiamondTrap.cpp
-    │   └── main.cpp
-    └── Makefile
-```
 
 ## Esercizi
 
@@ -399,47 +342,7 @@ Una classe che eredita sia da ScavTrap che da FragTrap, risolvendo il problema d
 - Catene complesse di costruttori/distruttori
 - Disambiguazione dei metodi con dichiarazioni `using`
 
-## Compilazione
-
-Ogni esercizio può essere compilato indipendentemente:
-
-```bash
-# Esercizio 00
-cd ex00
-make
-
-# Esercizio 01
-cd ex01
-make
-
-# Esercizio 02
-cd ex02
-make
-
-# Esercizio 03
-cd ex03
-make
-```
-
-Flag di compilazione: `-Wall -Wextra -Werror -std=c++98`
-
-## Utilizzo
-
-Esegui i binari compilati per vedere test completi:
-
-```bash
-# Esercizio 00
-./ex00/claptrap
-
-# Esercizio 01
-./ex01/scavtrap
-
-# Esercizio 02
-./ex02/fragtrap
-
-# Esercizio 03
-./ex03/diamondtrap
-```
+---
 
 Ogni programma dimostra:
 - Costruzione e distruzione degli oggetti
@@ -463,21 +366,10 @@ Ogni programma dimostra:
 ### Il Problema del Diamante
 Quando una classe eredita da più classi che condividono una classe base comune, si crea ambiguità e membri duplicati della classe base. L'ereditarietà virtuale risolve questo problema garantendo che esista una sola istanza della classe base.
 
-### Forma Canonica Ortodossa
-Tutte le classi implementano:
-- Costruttore di default
-- Copy constructor
-- Operatore di assegnazione
-- Distruttore
+## 👤 Autore
+**vhacman**
+- Github: [vhacman](https://github.com/vhacman)
+- 42 Intra: [vhacman](https://profile.intra.42.fr/)
 
-### Concatenamento Costruttori/Distruttori
-- Costruttori: Classe base → Classi derivate (nell'ordine di ereditarietà)
-- Distruttori: Classi derivate → Classe base (ordine inverso)
-
-## Autore
-
-vhacman (vhacman@student.42.fr)
-
-## Licenza
-
-Questo progetto fa parte del curriculum della Scuola 42.
+## ⚖️ Licenza
+Questo progetto fa parte del curriculum della 42 School. Si prega di fare riferimento alle loro linee guida per l'utilizzo e la distribuzione.
