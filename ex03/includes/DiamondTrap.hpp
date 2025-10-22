@@ -6,7 +6,7 @@
 /*   By: vhacman <vhacman@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 15:50:00 by vhacman           #+#    #+#             */
-/*   Updated: 2025/10/20 15:50:00 by vhacman          ###   ########.fr       */
+/*   Updated: 2025/10/22 19:04:09 by vhacman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class DiamondTrap : public FragTrap, public ScavTrap {
 	private:
-		std::string _name;
+		std::string	_name;
 
 	public:
 		//Constructors

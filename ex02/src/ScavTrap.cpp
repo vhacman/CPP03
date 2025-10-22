@@ -24,6 +24,7 @@ ScavTrap::ScavTrap() : ClapTrap() {
 }
 
 ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other) {
+	_guardingGate = other._guardingGate;
 	std::cout << "\033[1;32mScavTrap Copy ctor " << _name
 				<< " has been called!\033[0m" << std::endl;
 }
@@ -32,6 +33,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 20;
+	_guardingGate = false;
 
 	std::cout << "\033[1;32mScavTrap ctor for " << _name
 				<< " has been called\033[0m" << std::endl;
@@ -45,6 +47,7 @@ ScavTrap &ScavTrap::operator=(ScavTrap const &other) {
 	if (this != &other)
 	{
 		ClapTrap::operator=(other);
+		_guardingGate = other._guardingGate;
 		std::cout << "\033[1;32mScavTrap " << _name
 					<< " has been assigned\033[0m" << std::endl;
 	}

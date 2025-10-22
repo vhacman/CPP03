@@ -6,7 +6,7 @@
 /*   By: vhacman <vhacman@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 14:50:25 by vhacman           #+#    #+#             */
-/*   Updated: 2025/10/20 15:02:28 by vhacman          ###   ########.fr       */
+/*   Updated: 2025/10/22 19:02:08 by vhacman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class ClapTrap {
 		//overload operator
 		ClapTrap	&operator=(ClapTrap const &other);
 		//deconstructors
-		virtual ~ClapTrap();
+		virtual	~ClapTrap();
 
 		//methods
 		void	attack(const std::string &target);

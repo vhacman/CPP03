@@ -24,7 +24,7 @@ int main(void)
 	ScavTrap	scav1("Guardian");
 
 	std::cout << "\n\033[1;34m--- Creating ScavTrap 'Defender' ---\033[0m"
-				<< std::endl;ù
+				<< std::endl;
 	ScavTrap	scav2("Defender");
 
 	std::cout << "\n\033[1;36m=== Testing ScavTrap Specific Attack ===\033[0m"

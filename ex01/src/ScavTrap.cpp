@@ -6,7 +6,7 @@
 /*   By: vhacman <vhacman@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 14:50:40 by vhacman           #+#    #+#             */
-/*   Updated: 2025/10/20 15:16:03 by vhacman          ###   ########.fr       */
+/*   Updated: 2025/10/22 19:07:53 by vhacman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ ScavTrap::ScavTrap() : ClapTrap() {
 }
 
 ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other) {
+	//se non inizializzo mi da conditional jump
+	_guardingGate = other._guardingGate;
 	std::cout << "\033[1;32mScavTrap Copy ctor " << _name
 				<< " has been called!\033[0m" << std::endl;
 }
@@ -32,6 +34,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 20;
+	_guardingGate = false;
 
 	std::cout << "\033[1;32mScavTrap ctor for " << _name
 				<< " has been called\033[0m" << std::endl;
@@ -39,12 +42,13 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 
 
 //overloaded operator
-ScavTrap &ScavTrap::operator=(ScavTrap const &other) {
+ScavTrap	&ScavTrap::operator=(ScavTrap const &other) {
 	std::cout << "\033[1;32mScavTrap assignation operator called\033[0m" << std::endl;
 
 	if (this != &other)
 	{
 		ClapTrap::operator=(other);
+		_guardingGate = other._guardingGate;
 		std::cout << "\033[1;32mScavTrap " << _name
 					<< " has been assigned\033[0m" << std::endl;
 	}
@@ -58,7 +62,7 @@ ScavTrap::~ScavTrap() {
 }
 
 //attack
-void ScavTrap::attack(const std::string &target) {
+void	ScavTrap::attack(const std::string &target) {
 	if (_energyPoints <= 0)
 	{
 		std::cout << "\033[0;31mScavTrap " << _name
@@ -77,7 +81,7 @@ void ScavTrap::attack(const std::string &target) {
 	_energyPoints--;
 }
 
-void ScavTrap::guardGate() {
+void	ScavTrap::guardGate() {
 	if (_guardingGate == false)
 	{
 		_guardingGate = true;

@@ -6,7 +6,7 @@
 /*   By: vhacman <vhacman@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:50:21 by vhacman           #+#    #+#             */
-/*   Updated: 2025/10/20 14:38:26 by vhacman          ###   ########.fr       */
+/*   Updated: 2025/10/22 18:58:28 by vhacman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ ClapTrap::ClapTrap(std::string name)
 	std::cout << "ClapTrap " << _name << " has been called" << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap& other)
+ClapTrap::ClapTrap(const ClapTrap &other)
 				: _name(other._name),
 					_hitPoints(other._hitPoints),
 					_energyPoints(other._energyPoints),
@@ -30,7 +30,7 @@ ClapTrap::ClapTrap(const ClapTrap& other)
 	std::cout << "ClapTrap " << _name << " has been copied!" << std::endl;
 }
 
-ClapTrap &ClapTrap::operator=(ClapTrap const &other) {
+ClapTrap	&ClapTrap::operator=(ClapTrap const &other) {
 	if (this != &other)
 	{
 		_name = other._name;
@@ -46,7 +46,7 @@ ClapTrap::~ClapTrap(){
 	std::cout << "ClapTrap " << _name << " has been destroyed!" << std::endl;
 }
 
-void ClapTrap::attack(const std::string &target){
+void	ClapTrap::attack(const std::string &target){
 	if (_energyPoints <= 0)
 	{
 		std::cout << "ClapTrap " << _name << " has no energy to attack" << std::endl;
