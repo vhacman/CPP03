@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vhacman <vhacman@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vhacman <vhacman@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 15:50:00 by vhacman           #+#    #+#             */
-/*   Updated: 2025/10/20 15:53:50 by vhacman          ###   ########.fr       */
+/*   Updated: 2025/10/27 17:12:47 by vhacman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include <iostream>
 
 void printHeader(const std::string& title) {
-	std::cout << "\n\033[1;37m========================================\033[0m" << std::endl;
-	std::cout << "\033[1;37m" << title << "\033[0m" << std::endl;
-	std::cout << "\033[1;37m========================================\033[0m\n" << std::endl;
+	std::cout << "\n===============================================" << std::endl;
+	std::cout << "" << title << "" << std::endl;
+	std::cout << "===============================================\n" << std::endl;
 }
 
 void	testBasicDiamondTrap() {
@@ -136,7 +136,7 @@ void	testDestructorOrder() {
 		DiamondTrap	scoped("Scoped");
 		scoped.whoAmI();
 	}
-	std::cout << "\nScoped DiamondTrap destroyed (observe destructor order)" << std::endl;
+	std::cout << "\nScoped DiamondTrap destroyed" << std::endl;
 }
 
 void	testEnergyDepletion() {
@@ -151,10 +151,12 @@ void	testEnergyDepletion() {
 		if (i <= 25) {
 			std::cout << "Action " << i << ": ";
 			energyTest.attack("Target");
-		} else if (i <= 50) {
+		} 
+		else if (i <= 50) {
 			std::cout << "Action " << i << ": ";
 			energyTest.beRepaired(1);
-		} else {
+		}
+		else {
 			std::cout << "\nAction " << i << " (should fail - no energy): ";
 			energyTest.attack("Target");
 		}
@@ -162,16 +164,27 @@ void	testEnergyDepletion() {
 }
 
 int	main() {
-	testBasicDiamondTrap();
-	testDefaultConstructor();
-	testCopyConstructor();
-	testAssignmentOperator();
-	testMultipleDiamondTraps();
-	testAttributesInheritance();
-	testDestructorOrder();
-	testEnergyDepletion();
+	// testBasicDiamondTrap();
+	// testDefaultConstructor();
+	// testCopyConstructor();
+	// testAssignmentOperator();
+	// testMultipleDiamondTraps();
+	// testAttributesInheritance();
+	// testDestructorOrder();
+	// testEnergyDepletion();
 
-	printHeader("ALL TESTS COMPLETED");
+	// printHeader("ALL TESTS COMPLETED");
+	ScavTrap	prova("ciao");
+	ScavTrap	target("target");
+	prova.attack("target");
+
+	FragTrap	prova1("ciao1");
+	FragTrap	target1("target1");
+	prova1.attack("target1");
+	
+	DiamondTrap	prova2("ciao2");
+	DiamondTrap	target2("target2");
+	prova2.attack("target2");
 
 	return (0);
 }
