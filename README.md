@@ -94,6 +94,13 @@ The base robot class with fundamental attributes and behaviors.
 - `takeDamage(unsigned int amount)` - Reduces hit points
 - `beRepaired(unsigned int amount)` - Restores hit points, costing 1 energy point
 
+**Tested functionality:**
+- Basic object creation and destruction
+- Copy constructor and assignment operator
+- Energy depletion mechanics
+- Death state handling (dead robots cannot act)
+- Orthodox Canonical Form (OCF) implementation
+
 ### Exercise 01: ScavTrap
 
 A derived class from ClapTrap with enhanced capabilities.
@@ -113,6 +120,15 @@ A derived class from ClapTrap with enhanced capabilities.
 - Method overriding
 - Virtual destructors
 
+**Comprehensive test suite:**
+- Construction/destruction chaining
+- Method overriding (ScavTrap's custom attack message)
+- ScavTrap-specific methods (guardGate)
+- Inherited methods from ClapTrap
+- Copy constructor and assignment operator
+- Energy depletion testing
+- Death scenario handling
+
 ### Exercise 02: FragTrap
 
 Another derived class from ClapTrap with different attributes.
@@ -125,10 +141,26 @@ Another derived class from ClapTrap with different attributes.
 **Additional features:**
 - `highFivesGuys()` - Requests positive high fives
 
+**Key differences from ScavTrap:**
+- Does NOT override attack() (uses ClapTrap's version)
+- Different stats (100 HP, 100 Energy, 30 Attack)
+- Different special ability
+
 **Concepts demonstrated:**
 - Parallel inheritance hierarchies
 - Polymorphism through base class pointers
 - Multiple derived classes from the same base
+- Virtual destructors for proper cleanup
+
+**Comprehensive test suite:**
+- Base class (ClapTrap) behavior testing
+- ScavTrap functionality comparison
+- FragTrap specific features
+- Construction/destruction chaining
+- Copy constructor and assignment operator
+- Multiple objects of same type
+- **Polymorphism demonstration** - Using base class pointers to derived objects
+- Virtual destructor importance
 
 ### Exercise 03: DiamondTrap
 
@@ -159,6 +191,16 @@ A class inheriting from both ScavTrap and FragTrap, solving the diamond problem.
 - Name ambiguity resolution
 - Complex constructor/destructor chains
 - Method disambiguation with `using` declarations
+
+**Test suite available:**
+The main.cpp includes comprehensive tests (some commented out):
+- Basic DiamondTrap creation and whoAmI() functionality
+- Default constructor testing
+- Copy constructor and assignment operator
+- Multiple DiamondTrap objects interaction
+- Attribute inheritance verification (HP from FragTrap, Energy from ScavTrap, etc.)
+- Destructor call order
+- Energy depletion testing (50 energy points from ScavTrap)
 
 ## Compilation
 
@@ -295,6 +337,15 @@ Una classe derivata da ClapTrap con capacità migliorate.
 - Override dei metodi
 - Distruttori virtuali
 
+**Suite di test completa:**
+- Concatenamento di costruzione/distruzione
+- Override dei metodi (messaggio d'attacco personalizzato di ScavTrap)
+- Metodi specifici di ScavTrap (guardGate)
+- Metodi ereditati da ClapTrap
+- Copy constructor e operatore di assegnazione
+- Test di esaurimento dell'energia
+- Gestione dello scenario di morte
+
 ### Esercizio 02: FragTrap
 
 Un'altra classe derivata da ClapTrap con attributi differenti.
@@ -307,10 +358,26 @@ Un'altra classe derivata da ClapTrap con attributi differenti.
 **Funzionalità aggiuntive:**
 - `highFivesGuys()` - Richiede high five positivi
 
+**Differenze chiave da ScavTrap:**
+- NON effettua l'override di attack() (usa la versione di ClapTrap)
+- Statistiche diverse (100 HP, 100 Energia, 30 Attacco)
+- Abilità speciale diversa
+
 **Concetti dimostrati:**
 - Gerarchie di ereditarietà parallele
 - Polimorfismo attraverso puntatori alla classe base
 - Classi derivate multiple dalla stessa base
+- Distruttori virtuali per una corretta pulizia
+
+**Suite di test completa:**
+- Test del comportamento della classe base (ClapTrap)
+- Confronto con la funzionalità di ScavTrap
+- Funzionalità specifiche di FragTrap
+- Concatenamento di costruzione/distruzione
+- Copy constructor e operatore di assegnazione
+- Oggetti multipli dello stesso tipo
+- **Dimostrazione del polimorfismo** - Uso di puntatori alla classe base per oggetti derivati
+- Importanza del distruttore virtuale
 
 ### Esercizio 03: DiamondTrap
 
@@ -341,6 +408,16 @@ Una classe che eredita sia da ScavTrap che da FragTrap, risolvendo il problema d
 - Risoluzione dell'ambiguità dei nomi
 - Catene complesse di costruttori/distruttori
 - Disambiguazione dei metodi con dichiarazioni `using`
+
+**Suite di test disponibili:**
+Il main.cpp include test completi (alcuni commentati):
+- Creazione base di DiamondTrap e funzionalità whoAmI()
+- Test del costruttore di default
+- Copy constructor e operatore di assegnazione
+- Interazione tra oggetti DiamondTrap multipli
+- Verifica dell'ereditarietà degli attributi (HP da FragTrap, Energia da ScavTrap, ecc.)
+- Ordine di chiamata dei distruttori
+- Test di esaurimento dell'energia (50 punti energia da ScavTrap)
 
 ---
 
